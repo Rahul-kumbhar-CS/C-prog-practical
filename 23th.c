@@ -1,0 +1,20 @@
+//WAP to print the palindrome number
+#include<stdio.h>
+int main()
+{
+    int num, rem, rev=0, original;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    original = num; // Store the original number
+    while(num != 0)
+    {
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num = num / 10;
+    }
+    if(original == rev)
+        printf("%d is a palindrome number.", original);
+    else
+        printf("%d is not a palindrome number.", original);
+    return 0;
+}
